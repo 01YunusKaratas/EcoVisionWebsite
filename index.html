@@ -213,44 +213,44 @@
 
  
 <script>
-  // Örnek veriler
-  const data = {
-    2022: {
-      donatedClothes: "40 million tons.",
-      recycledClothes: "15 million tons.",
-      needyPeople: "324.3 million"
-    },
-    2023: {
-      donatedClothes: "41 million tons.",
-      recycledClothes: "16 million tons.",
-      needyPeople: "363.3 million"
-    },
-    2024: {
-      donatedClothes: "42 million tons.",
-      recycledClothes: "18 million tons.",
-      needyPeople: "375 million"
-    },
-    2025: {
-      donatedClothes: "43 million tons.",
-      recycledClothes: "20 million tons.",
-      needyPeople: "390 million"
-    }
-  };
-
   
-  document.querySelectorAll('.yearss').forEach(item => {
+  // Örnek veriler
+const data = {
+  2022: { donatedClothes: 40, recycledClothes: 15, needyPeople: 324.3 },
+  2023: { donatedClothes: 41, recycledClothes: 16, needyPeople: 363.3 },
+  2024: { donatedClothes: 42, recycledClothes: 18, needyPeople: 375 },
+  2025: { donatedClothes: 43, recycledClothes: 20, needyPeople: 390 }
+};
+
+// Sayıyı animasyonlu artıran fonksiyon
+function animateNumber(elementId, targetValue, duration = 1000) {
+  const element = document.getElementById(elementId);
+  let startValue = 0;
+  const increment = targetValue / (duration / 30); // 30ms'de bir artır
+  
+  const counter = setInterval(() => {
+    startValue += increment;
+    if (startValue >= targetValue) {
+      startValue = targetValue; // Hedefe ulaştıysa direkt göster
+      clearInterval(counter);
+    }
+    element.textContent = Math.round(startValue) + (elementId !== "needyPeople" ? " million tons." : " million");
+  }, 30);
+}
+
+// Yıl seçimine event listener ekle
+document.querySelectorAll('.yearss').forEach(item => {
   item.addEventListener('click', function(event) {
-    event.preventDefault();  // Sayfanın yeniden yüklenmesini engeller
+    event.preventDefault(); // Sayfanın yeniden yüklenmesini engeller
 
     const year = this.textContent.trim();
     const yearData = data[year];
 
-    document.getElementById('donatedClothes').textContent = yearData.donatedClothes;
-    document.getElementById('recycledClothes').textContent = yearData.recycledClothes;
-    document.getElementById('needyPeople').textContent = yearData.needyPeople;
+    animateNumber('donatedClothes', yearData.donatedClothes);
+    animateNumber('recycledClothes', yearData.recycledClothes);
+    animateNumber('needyPeople', yearData.needyPeople);
   });
 });
-
 
 </script>
 
