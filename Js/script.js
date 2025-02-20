@@ -14,6 +14,7 @@ window.addEventListener("scroll",function () {
         }
     }else{
         includesDom.style.marginTop="150px";
+        logoDom.style.display = "block";
     }
     
 

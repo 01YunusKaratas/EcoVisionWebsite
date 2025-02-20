@@ -13,7 +13,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/Css/style.css">
-
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Font Awesome CDN -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <!--Animation css-->
@@ -27,8 +27,9 @@
 
 <body>
   <!--Navbar starting for project-->
+
   <nav class="navbar navbar-expand-lg position-fixed ">
-    <img src="/media/logo.jpeg" class="" alt="logo" width="100px" height="100px" id="logo" style="display: none;">
+    <img src="/media/logo.jpeg" class="img-fluid" alt="logo" width="100px" height="100px" id="logo" style="display: none;">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -71,21 +72,21 @@
             <h6 class="content-title">Welcome to EcoClothBin</h6>
             <h1>Recycle Today for a better tomorrow</h1>
           </div>
-          <img src="/media/carousel-1.jpg" class="d-block w-100" alt="banner-1">
+          <img src="/media/carousel-1.jpg" class="d-block w-100 img-fluid" alt="banner-1">
+        </div>
+        <div class="carousel-item">
+          <div class="content-carousel animate__animated animate__pulse" id="carousel-text">
+            <h6 class="content-title ">Welcome to EcoClothBin</h6>
+            <h1>Recycle Today for a better tomorrow</h1>
+          </div>
+          <img src="/media/carousel-2.jpg" class="d-block w-100 img-fluid" alt="banner-2">
         </div>
         <div class="carousel-item">
           <div class="content-carousel animate__animated animate__pulse" id="carousel-text">
             <h6 class="content-title">Welcome to EcoClothBin</h6>
             <h1>Recycle Today for a better tomorrow</h1>
           </div>
-          <img src="/media/carousel-2.jpg" class="d-block w-100" alt="banner-2">
-        </div>
-        <div class="carousel-item">
-          <div class="content-carousel animate__animated animate__pulse" id="carousel-text">
-            <h6 class="content-title">Welcome to EcoClothBin</h6>
-            <h1>Recycle Today for a better tomorrow</h1>
-          </div>
-          <img src="/media/carousel-3.jpg" class="d-block w-100" alt="banner-3">
+          <img src="/media/carousel-3.jpg" class="d-block w-100 img-fluid" alt="banner-3">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
@@ -106,7 +107,9 @@
   <!--Carousel finished-->
 
   <!--Seciton starting-->
+  <div  data-aos="fade-down"  data-aos-duration="1500">
   <div class="container-fluid d-flex justify-content-center align-items-center my-5" id="section-content">
+   
     <div class="row">
       <div class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center">
         <div class="content">
@@ -125,55 +128,62 @@
       </div>
     </div>
   </div>
+</div>
   <!--Section finished-->
 
-  <div class="container my-5" id="problems">
-    <!--All people's problems about recycle and donation to clothes START-->
 
-<ul class="nav justify-content-center col-sm-12 my-3" id="nav-content">
-  <li class="nav-item content-nav-item col-sm-12 col-md-2">
-    <a class="nav-link active yearss" aria-current="page" href="#">2022</a>
-  </li>
-  <li class="nav-item content-nav-item col-sm-12 col-md-2">
-    <a class="nav-link yearss" href="#">2023</a>
-  </li>
-  <li class="nav-item content-nav-item col-sm-12 col-md-2">
-    <a class="nav-link yearss" href="#">2024</a>
-  </li>
-  <li class="nav-item content-nav-item col-sm-12 col-md-2">
-    <a class="nav-link yearss" href="#" tabindex="-1" aria-disabled="true">2025</a>
-  </li>
-</ul>
+    
+    <div class="container my-5 position-relative" id="problems">
+        <!-- All people's problems about recycle and donation to clothes START -->
+        <ul class="nav justify-content-center col-sm-12 my-3" id="nav-content">
+            <li class="nav-item content-nav-item col-sm-12 col-md-2">
+                <a class="nav-link active yearss" aria-current="page" href="#">2022</a>
+            </li>
+            <li class="nav-item content-nav-item col-sm-12 col-md-2">
+                <a class="nav-link yearss" href="#">2023</a>
+            </li>
+            <li class="nav-item content-nav-item col-sm-12 col-md-2">
+                <a class="nav-link yearss" href="#">2024</a>
+            </li>
+            <li class="nav-item content-nav-item col-sm-12 col-md-2">
+                <a class="nav-link yearss" href="#" tabindex="-1" aria-disabled="true">2025</a>
+            </li>
+        </ul>
 
-<div class="container-fluid col-sm-12">
-  <div class="row">
-    <div class="col-md-4 my-2">
-      <div class="card login-card">
-        <div class="card-body login-card-body">
-          <h6 class="card-title login-title">donated clothing</h6>
-          <p class="card-text login-text" id="donatedClothes">40 million tons</p>
+        <div class="container-fluid col-sm-12">
+            <div class="row">
+                <div class="col-md-4 my-2">
+                    <div class="card login-card">
+                        <div class="card-body login-card-body">
+                            <h6 class="card-title login-title">Donated Clothing</h6>
+                            <p class="card-text login-text" id="donatedClothes">40 million tons</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 my-2">
+                    <div class="card login-card">
+                        <div class="card-body login-card-body">
+                            <h6 class="card-title login-title">Recycled Clothing</h6>
+                            <p class="card-text login-text" id="recycledClothes">15 million tons</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 my-2">
+                    <div class="card login-card">
+                        <div class="card-body login-card-body">
+                            <h6 class="card-title login-title">Needy People</h6>
+                            <p class="card-text login-text" id="needyPeople">324.3 million</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="col-md-4 my-2">
-      <div class="card login-card">
-        <div class="card-body login-card-body">
-          <h6 class="card-title login-title">Recycled clothing</h6>
-          <p class="card-text login-text" id="recycledClothes">15 million tons</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 my-2">
-      <div class="card login-card">
-        <div class="card-body login-card-body">
-          <h6 class="card-title login-title">Needy People</h6>
-          <p class="card-text login-text" id="needyPeople">324.3 million</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+    </div> 
+
+
+  
+
+
 
 
 <!--All people's problems about recycle and donation to clothes FINISHED-->
@@ -206,8 +216,6 @@
 
 
 <!--Footer End-->
-
-
 
 
 
@@ -263,6 +271,13 @@ document.querySelectorAll('.yearss').forEach(item => {
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
   <script src="/Js/script.js"></script>
+  <script type="text/javascript" src="/Js/particles.js"> </script>
+  <script type="text/javascript" src="/Js/app.js"> </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  
 
 </body>
 

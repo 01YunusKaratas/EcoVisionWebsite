@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: white;
+    background-color: rgb(159, 169, 172);
     
 }
 
@@ -86,7 +86,7 @@ body{
     background-color: #F6F6F6;
     font-family: "Barlow Condensed", sans-serif;
     letter-spacing: 1px; 
-    
+    z-index: -1;
     width: 100%;
 }
 .content-about{
@@ -139,7 +139,7 @@ body{
 }
 
 .login-card{
-    background-image: url(/card-background.jpg);
+    background-image: url(/media/card-background.jpg);
     background-repeat:no-repeat;
     background-size:cover;
     background-position:left;
@@ -236,9 +236,17 @@ body{
     height: 60px;
 }
 
-#problems{
-    width: 100vw;
+#particles-js {
+    position: fixed; 
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1; 
 }
+
+
+
 
 
 
@@ -255,6 +263,7 @@ body{
         width: 60px;
         height: 60px;
         margin: 0px 20px;
+        display: block;
     }
     .footer{
         display: flex;
@@ -277,4 +286,20 @@ body{
     #contacts{
         margin-right:10px;
     }
+    
+    .particles-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1; /* Efekti en arkaya al */
+    }
+    #needyPeople,#recycledClothes,#donatedClothes{
+        color: rgb(0, 0, 0);
+    }
+
+    
 }
+
+
