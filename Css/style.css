@@ -244,14 +244,21 @@ body{
     left: 0;
     z-index: -1; 
 }
-
-
-
-
+#content-section-title{
+    color: #DFB162;
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: 900;
+    text-transform: capitalize;
+}
 
 
 @media (max-width: 480px) {
     
+    body{
+        font-size: 14px;
+    }
+
     .banner{
        margin-top:150px;
     }
@@ -299,7 +306,26 @@ body{
         color: rgb(0, 0, 0);
     }
 
-    
+    .content-about{
+        font-size: 14px;
+    }
+    #carousel-item{
+        position: relative;
+    }
+    .content-title {
+        font-size: 14px; 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s ease-in-out; /* Yumuşak bir geçiş efekti ekler */
+    }
+
+    .content-h1 {
+        display: none;
+    }
+
+   
 }
 
 

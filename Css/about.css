@@ -118,6 +118,9 @@ p{
     }
     .img-fluid{
         margin-top: 20px !important;
-    }
     
+    }
+    #includes{
+        margin-top: 50%;
+    }
 }
